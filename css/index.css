@@ -1,0 +1,208 @@
+/* BASIC PROPORTIES ####################################################################################################### */
+
+/* MAIN CONTENT CLASSES ############################################################################################################ */
+
+main {
+  margin-bottom: 50px;
+}
+
+/* SECTION TOP ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+.section-top {
+  padding: 4rem 0 4rem 0;
+}
+
+.section-top-img-box {
+  height: 300px;
+}
+
+.section-top-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.section-top-img:hover {
+  filter: drop-shadow(0px 3px 3px var(--color-backgroundMokka));
+  scale: 101%;
+}
+
+.section-top-content-box {
+  padding: 0 2rem 0 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.section-top-content-box h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-top-content-box p {
+  margin-bottom: 3rem;
+}
+
+.button-green {
+  color: white;
+  background-color: var(--color-themeGreen);
+  border: none;
+  align-self: flex-start;
+  padding: 0.75rem 3rem;
+}
+
+a.button-green {
+  text-decoration: none;
+}
+
+
+/* SECTION MIDDLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.section-middle {
+  background-color: var(--color-backgroundCappucino);
+}
+
+.sectionMiddleFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.food-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-middle h2 {
+  margin-bottom: 32px;
+}
+
+.food-box p {
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.food-image {
+  height: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+img.food-image {
+  transition: all 0.2s ease-in-out;
+}
+
+.section-middle img.food-image:hover {
+  filter: drop-shadow(0px 3px 3px var(--color-backgroundMokka));
+  scale: 101%;
+}
+
+.food-container a {
+  text-decoration: none;
+  color: #000;
+}
+
+.food-container a:hover {
+  color: var(--color-themeGreen);
+}
+
+/* SECTION BOTTOM ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.sectionBottomFlex h2 {
+  font-size: 1.5rem;
+}
+
+.sectionBottomFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom:2rem;
+}
+
+.sectionBottomFlex img {
+  margin-left: 2rem;
+}
+
+.sectionBottomContent {
+  display: flex;
+  align-items: center;
+}
+
+
+/* ################################################################################################# */
+/* ######################################################################################################## */
+/* MEDIA QUERYS ############################################################################################# */
+
+
+
+
+@media screen and (width < 1120px) {
+  .section-top{
+    padding-top:32px;
+  }
+  .section-top .basicContentWidth, .section-bottom .basicContentWidth {
+    flex-direction: column;
+  }
+
+  .section-bottom .sectionBottomContent {
+    flex-direction: column-reverse;
+  }
+
+  .section-bottom .food-image{
+    aspect-ratio: unset;
+    width:100%;
+    height:300px;
+    margin:0 0 20px 0;
+  }
+
+  .section-top-content-box {
+    padding: 2rem 0 0;
+  }
+
+  .food-container {
+    gap: 20px;
+  }
+
+  .food-container a {
+    flex-basis: 100%;
+  }
+
+  .section-middle .food-image {
+    height: unset;
+    width: 100%;
+  }
+  .sectionBottomFlex {
+    padding-bottom:0;
+  }
+  
+}
+
+@media screen and (width < 700px) {
+  .section-top{
+    padding-top:16px;
+  }
+  .food-container {
+    flex-direction: column;
+  }
+
+  .section-middle .food-image {
+    aspect-ratio: 3 / 1;
+  }
+ 
+
+}

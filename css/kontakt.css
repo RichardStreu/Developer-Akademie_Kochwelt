@@ -1,0 +1,179 @@
+/* BASIC PROPORTIES ####################################################################################################### */
+
+@font-face {
+  font-family: "Raleway";
+  src: url(../assets/fonts/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+:root {
+  --color-fontMain: rgb(0, 0, 0);
+  --color-backgroundWhite: rgb(255, 255, 255);
+  --color-backgroundCappucino: rgb(239, 239, 239);
+  --color-backgroundMokka: rgb(64, 59, 59);
+  --color-themeGreen: rgb(0, 128, 0);
+}
+
+/* BASIC CLASSES ############################################################################################################ */
+
+.basicContentWidth {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 0 auto;
+  display: flex;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.opacityZero {
+  opacity: 0;
+}
+
+.opacityOne {
+  opacity: 1;
+}
+
+
+/*-- HEADER SECTION ######################################################################################################### */
+
+
+
+/*-- MAIN SECTION ######################################################################################################### */
+
+.main {
+  flex: 1;
+  margin-top: 112px;
+}
+
+.basicContentWidth.contact-align {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin:16px auto;
+}
+
+.contact-form-container {
+  width: 400px;
+  height: 500px;
+  background-color: var(--color-backgroundCappucino);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px rgba(64, 59, 59, 0.2);
+}
+
+.messageAfterContact {
+  width: 400px;
+  height: 500px;
+  background-color: var(--color-backgroundCappucino);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px rgba(64, 59, 59, 0.2);
+}
+
+.form-headline {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.formButtonBox {
+  display: flex;
+  justify-content: center;
+}
+
+.form-box button {
+  color: white;
+  background-color: var(--color-themeGreen);
+  border: none;
+  align-self: flex-start;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  box-shadow: 0 0 3px var(--color-themeGreen);
+}
+
+.form-box input {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form-box textarea {
+  height: 10rem;
+  resize: none;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.countdownContainer {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown {
+  font-size: 5rem;
+  font-weight: 700;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/*-- FOOTER SECTION ######################################################################################################### */
+@media screen and (width < 1200px) and (orientation: landscape) {
+  .main {
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (width < 900px) {
+  .basicContentWidth{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (width < 500px) {
+  .basicContentWidth {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

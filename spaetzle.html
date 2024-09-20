@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kochwelt</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/recipeRichard.css" />
+  <link rel="icon" href="./assets/img/logo_small.png" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <!-- HEADER SECTION ######################################################################################################### -->
+
+  <div id="header"></div>
+
+  <!-- MAIN CONTENT SECTION ############################################################################################## -->
+  <main>
+    <!-- recipeTopSection -->
+    <section class="recipeTopSection basicContentWidth">
+      <h1>Tiroler Kasspatzln</h1>
+      <div class="imageBoxRecipeTopSection">
+        <img class="imageCover" src="./assets/img/kaesespaetzle.jpg" alt="Bild eines köstlichen Bauernsalats" />
+      </div>
+      <div class="recipeDataContainer">
+        <div class="recipeDataBox">
+          <img src="./assets/img/clock-regular.svg" alt="Dauer der Zubereitung" />
+          <p>10 Min.</p>
+        </div>
+        <div class="recipeDataBox">
+          <img src="./assets/img/brain-solid.svg" alt="Schwierigkeit" />
+          <p>simpel</p>
+        </div>
+        <div class="recipeDataBox">
+          <img src="./assets/img/calendar-alt-regular.svg" alt="Erstellt am:" />
+          <p>14.08.2024</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- recipeMiddleSection -->
+    <section class="recipeMiddleSection basicContentWidth">
+      <div class="recipeInputPortionContainer">
+        <div>Zutaten für</div>
+        <input onfocus="enterToCalculat()" type="number" min="1" name="" value="4" id="recipeNumberOfPortion" />
+        <button onclick="calculateAmount()" class="button-green">Portionen</button>
+      </div>
+
+      <!-- recipeIncredientsList -->
+      <ul class="recipeIncredientsList">
+        <li class="liCappucino">
+          <div id="recipeIncredientsNumber-1"><span>1</span> Zwiebel(n), gewürfelt</div>
+        </li>
+
+        <li>
+          <div id="recipeIncredientsNumber-2">
+            Butter
+          </div>
+        </li>
+
+        <li class="liCappucino">
+          <div id="recipeIncredientsNumber-3"><span>400</span> ml Sahne</div>
+        </li>
+
+        <li>
+          <div id="recipeIncredientsNumber-4"><span>0.5</span> Bund Petersilie, gehackte</div>
+        </li>
+
+        <li class="liCappucino">
+          <div id="recipeIncredientsNumber-5">Salz und Pfeffer</div>
+        </li>
+
+        <li>
+          <div id="recipeIncredientsNumber-6">
+            <span>200</span> g Emmentaler, geriebener
+          </div>
+        </li>
+
+        <li class="liCappucino">
+          <div id="recipeIncredientsNumber-7"><span>1</span> kg Spätzle, frische, aus dem Kühlregal</div>
+        </li>
+
+        <li>
+          <div id="recipeIncredientsNumber-8">Fett für die Form</div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- recipeBottomSection -->
+    <section class="recipeBottomSection basicContentWidth">
+      <h1>Zubereitung</h1>
+      <!-- recipeDataContainer -->
+      <div class="recipeDataContainer">
+        <div class="recipeDataBox">
+          <img src="./assets/img/clock-regular.svg" alt="Zubereitungsdauer" />
+          <p>Arbeitszeit ca. 10 Minuten</p>
+        </div>
+        <div class="recipeDataBox">
+          <img src="./assets/img/clock-regular.svg" alt="Zubereitungsdauer gesamt" />
+          <p>Gesamtzeit ca. 40 Minuten</p>
+        </div>
+      </div>
+      <!-- recipe text -->
+      <p>
+        Die gewürfelte Zwiebel in etwas Butter glasig anbraten. Mit der Sahne ablöschen, gehackte Petersilie dazugeben
+        und mit Salz und Pfeffer abschmecken. Kurz aufkochen lassen, dann die Hälfte vom Käse dazugeben und gut
+        durchrühren. Die Spätzle unterheben.
+        <br><br>
+        Die Mischung in eine gefettete Auflaufform geben und mit dem restlichen Käse bestreuen.
+        <br><br>
+        Im heißen Backofen bei 200 °C Ober-/Unterhitze ca. 20 Minuten überbacken, bis die gewünschte Bräune erreicht
+        ist.
+      </p>
+      <h3>Rezept erstellt von</h3>
+      <div class="profileChef">
+        <img src="./assets/img/RichardProfilbild.jpg" alt="Profile Image">
+        <p>Richard</p>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER SECTION ##################################################################################################### -->
+  <footer id="footer"></footer>
+</body>
+<script src="./js/calculateIncredients.js"></script>
+
+</html>
